@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:projetoPOOSwift}",
+            "name": "Debug projetoPOOSwift",
+            "target": "projetoPOOSwift",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug projetoPOOSwift"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:projetoPOOSwift}",
+            "name": "Release projetoPOOSwift",
+            "target": "projetoPOOSwift",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release projetoPOOSwift"
+        }
+    ]
+}

@@ -1,7 +1,28 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+import Foundation
 
-var nome = "Seu Nome"
-let sobrenome = "Seu Sobrenome"
+let planoMensal = PlanoMensal(nome: "Plano Mensal")
+let planoAnual = PlanoAnual(nome: "Plano Anual Promocional")
 
-print("Bem-vindo(a), \(nome) \(sobrenome)!")
+let aluno = Aluno(
+    nome: "Carlos Silva",
+    email: "carlos.silva@email.com",
+    matricula: "2026001",
+    nivel: .intermediario,
+    plano: planoMensal
+)
+
+let instrutor = Instrutor(
+    nome: "Ana Souza",
+    email: "ana.souza@email.com",
+    especialidade: "Programação Swift"
+)
+
+print("=== Cadastro da Academia ===")
+print(aluno.getDescricao())
+print("Plano do aluno: \(aluno.plano.nome)")
+print(String(format: "Mensalidade: R$ %.2f", aluno.plano.calcularMensalidade()))
+print("---")
+print(instrutor.getDescricao())
+print("---")
+print("Plano anual: \(planoAnual.nome)")
+print(String(format: "Valor anual com desconto: R$ %.2f", planoAnual.calcularMensalidade()))
